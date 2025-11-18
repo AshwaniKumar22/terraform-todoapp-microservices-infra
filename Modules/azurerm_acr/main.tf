@@ -3,9 +3,8 @@ resource "azurerm_container_registry" "acr" {
   name                = each.value.acr_name
   resource_group_name = each.value.rg_name
   location            = each.value.location
-  sku                 = "Premium"
-  admin_enabled       = false
-  tags     = var.tags
-
+  sku                 = each.value.sku
+  admin_enabled       = each.value.admin_enabled
+  tags     = merge(var.common_tags, each.value.tags)
 }
 

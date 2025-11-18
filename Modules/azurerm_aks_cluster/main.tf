@@ -6,14 +6,14 @@ resource "azurerm_kubernetes_cluster" "aks" {
   dns_prefix          = each.value.dns_prefix
 
   default_node_pool {
-    name       = "default"
-    node_count = 1
-    vm_size    = "Standard_D2_v2"
+    name       = each.value.node_pool_name
+    node_count = each.value.node_count
+    vm_size    = each.value.vm_size
   }
 
   identity {
-    type = "SystemAssigned"
+    type = each.value.identity_type
   }
 
-  tags     = var.tags
+  tags     = merge(var.common_tags, each.value.tags)
 }

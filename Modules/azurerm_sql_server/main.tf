@@ -3,10 +3,10 @@ resource "azurerm_mssql_server" "sql_server" {
   name                         = each.value.sql_server_name
   resource_group_name          = each.value.rg_name
   location                     = each.value.location
-  version                      = "12.0"
+  version                      = each.value.version
   administrator_login          = each.value.admin_username
   administrator_login_password = each.value.admin_password
-  minimum_tls_version          = "1.2"
+  minimum_tls_version          = each.value.minimum_tls_version
 
-  tags     = var.tags
+tags     = merge(var.common_tags, each.value.tags)
 }
