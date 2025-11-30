@@ -1,0 +1,39 @@
+name: "dev_TF_infra_microservices"
+
+on: workflow_dispatch 
+  # push: 
+  #   branches:
+  #     - feature/*
+  #     - main
+    
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraformInit:
+    name: terrafrom-init
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.0
+        
+      - name: Terraform fmt
+        id: fmt
+        run: terraform fmt -check
+        continue-on-error: true
+      
+      - name: Terraform Init
+        id: init
+        run: terraform init -input=false
+      
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+      
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -no-color -input=false
+        continue-on-error: true
+      
+ 
