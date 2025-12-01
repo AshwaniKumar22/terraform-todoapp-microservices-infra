@@ -5,7 +5,7 @@ name: "dev_TF_infra_microservices"
 on:
   pull_request:
     branches:
-      - main
+    - main
   push:
     branches:
     - main
