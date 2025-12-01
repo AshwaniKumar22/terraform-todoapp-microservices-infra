@@ -4,7 +4,6 @@ module "rgs" {
   common_tags = local.common_tags
   }
 
-
 module "sql_server" {
     depends_on = [ module.rgs ]
   source             = "../../Modules/azurerm_sql_server"
