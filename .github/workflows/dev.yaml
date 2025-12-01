@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   terraformInitPlan:
-    name: terrafrom-init-plan
+    # name: terrafrom-init-plan
     runs-on: self-hosted
     steps:
       - name: Checkout
