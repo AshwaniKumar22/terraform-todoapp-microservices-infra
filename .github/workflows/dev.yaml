@@ -1,14 +1,14 @@
 name: "dev_TF_infra_microservices"
 
-# on: workflow_dispatch
+on: workflow_dispatch
 
-on:
-  pull_request:
-    branches:
-    - main
-  push:
-    branches:
-    - main
+# on:
+#   pull_request:
+#     branches:
+#     - main
+#   push:
+#     branches:
+#     - main
 
       
 permissions:
