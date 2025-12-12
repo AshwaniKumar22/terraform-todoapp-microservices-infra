@@ -7,7 +7,7 @@ terraform {
   }  
      backend "azurerm" {
   resource_group_name  = "githubaction-rg"
-  storage_account_name = "githubactionstrg1"
+  storage_account_name = "githubactionstrg2"
   container_name       = "tfstate"
   key                  = "dev.tfstate"
 }
@@ -16,5 +16,5 @@ terraform {
 provider "azurerm" {
   features {}
   # Configuration options
-  subscription_id = "f63f9a72-32ba-4cf2-acf0-446dad259c1b"
+  subscription_id = "14ecb8dc-c241-4d1e-a6c1-7efd26e3f1e3"
 }
