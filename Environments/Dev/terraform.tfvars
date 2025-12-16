@@ -35,7 +35,7 @@ db_details = {
 
 kv_details = {
   kv1 = {
-    kv_name  = "todoapp-kv1322"
+    kv_name  = "todoapp-kv777"
     rg_name  = "rg_todoapp"
     location = "central india"
   }
@@ -43,7 +43,7 @@ kv_details = {
 
 acr_details = {
   acr1 = {
-    acr_name      = "todoappacr2213"
+    acr_name      = "todoappacr777"
     rg_name       = "rg_todoapp"
     location      = "central india"
     sku           = "Premium"
