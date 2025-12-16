@@ -8,7 +8,7 @@ rg_details = {
 
 sql_server_details = {
   sql1 = {
-    sql_server_name     = "todoapp-sql-server1322"
+    sql_server_name     = "todoapp-sql-server777"
     rg_name             = "rg_todoapp"
     location            = "central india"
     version             = "12.0"
@@ -22,7 +22,7 @@ sql_server_details = {
 
 db_details = {
   db1 = {
-    sql_server_name = "todoapp-sql-server1322"
+    sql_server_name = "todoapp-sql-server777"
     rg_name         = "rg_todoapp"
     db_name         = "todoapp_db1322"
     collation       = "SQL_Latin1_General_CP1_CI_AS"
